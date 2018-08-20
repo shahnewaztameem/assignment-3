@@ -20,6 +20,8 @@ function budgetCalculator(numberOfWatchToBuy, numberOfPhoneToBuy, numberOfLaptop
 
   if (numberOfWatchToBuy < 0 || numberOfPhoneToBuy < 0 || numberOfLaptopToBuy < 0) return 'Product Quantity can not be negative';
 
+  if (numberOfWatchToBuy % 1 != 0 || numberOfPhoneToBuy % 1 != 0 || numberOfLaptopToBuy % 1 != 0) return 'All parameter value should be Integer!';
+
   //calculate and return total price
   return (watchPrice * numberOfWatchToBuy) + (phonePrice * numberOfPhoneToBuy) + (laptopPrice * numberOfLaptopToBuy);
 }
@@ -69,3 +71,4 @@ function megaFriend(numberOfFriends) {
   }
   return maxLengthElement;
 }
+
