@@ -55,6 +55,8 @@ function hotelCost(numberOfDays) {
 // recives an array and return the max length element
 function megaFriend(numberOfFriends) {
   if (numberOfFriends.length <= 0) return 'Length can not be empty';
+  if (!(numberOfFriends instanceof Array)) return 'Passed argument is not an array';
+
   let maxLengthElement = numberOfFriends[0];
 
   for (let i = 1; i < numberOfFriends.length; i++) {
